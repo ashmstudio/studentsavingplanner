@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,3 +87,93 @@
   <script src="script.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SavePlan JS | Savings Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <p class="agency-name">PERSONAL FINANCE SERVICE</p>
+      <h1>SavePlan JS</h1>
+      <p class="header-description">A simple tool to plan one savings goal.</p>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <section class="planner-card" aria-labelledby="form-title">
+      <div class="section-heading">
+        <p class="section-label">SAVINGS PLANNER</p>
+        <h2 id="form-title">Enter your savings information</h2>
+        <p>All amounts are in Philippine pesos (₱).</p>
+      </div>
+
+      <form id="savings-form" novalidate>
+        <div class="form-field">
+          <label for="goal-name">Savings goal name</label>
+          <input id="goal-name" name="goalName" type="text" placeholder="Example: New Laptop" required>
+        </div>
+
+        <div class="form-field">
+          <label for="target-amount">Target savings amount (₱)</label>
+          <input id="target-amount" name="targetAmount" type="number" min="0.01" step="any" placeholder="10000.00" required>
+        </div>
+
+        <div class="form-field">
+          <label for="current-savings">Current savings (₱)</label>
+          <input id="current-savings" name="currentSavings" type="number" min="0" step="any" placeholder="2000.00" required>
+        </div>
+
+        <div class="form-field">
+          <label for="monthly-savings">Planned monthly savings (₱)</label>
+          <input id="monthly-savings" name="monthlySavings" type="number" min="0" step="any" placeholder="1000.00" required>
+          <small>Enter zero if the goal has already been reached.</small>
+        </div>
+
+        <p id="error-message" class="message error-message" role="alert" hidden></p>
+        <button type="submit">Calculate savings plan</button>
+      </form>
+    </section>
+
+    <section id="results" class="results-card" aria-labelledby="results-title" aria-live="polite" hidden>
+      <div class="results-heading">
+        <div>
+          <p class="section-label">PLAN SUMMARY</p>
+          <h2 id="results-title">Your savings results</h2>
+        </div>
+        <span id="status" class="status-badge"></span>
+      </div>
+      <p id="result-goal" class="result-goal"></p>
+      <dl class="result-list">
+        <div class="result-row">
+          <dt>Remaining amount</dt>
+          <dd id="remaining-result"></dd>
+        </div>
+        <div class="result-row">
+          <dt>Goal completed</dt>
+          <dd id="percentage-result"></dd>
+        </div>
+        <div class="result-row">
+          <dt>Estimated time</dt>
+          <dd id="months-result"></dd>
+        </div>
+        <div class="result-row">
+          <dt>Estimated completion date</dt>
+          <dd id="date-result"></dd>
+        </div>
+      </dl>
+    </section>
+
+    <footer>
+      <p>SavePlan JS calculates an estimate from the information you enter.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
+>>>>>>> bf3814da9e1183289b58914e3bbb342f5fb74f30
